@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    
+	<script type="text/javascript">        
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                ajax: {
+                    url: 'PlayerRanks.php'
+                },
+                columns: [ {data: 'Name'}, 
+                           {data: 'PVPKills'},
+                           {data: 'PVPDistance'},
+                           {data: 'PVEKills'},
+                           {data: 'PVEDistance'},
+                           {data: 'SleepersKilled'},
+                           {data: 'HeadShots'},
+                           {data: 'Deaths'},
+                           {data: 'Suicides'},
+                           {data: 'KDR'},
+                           {data: 'SDR'},
+                           {data: 'TimesHealed'},
+                           {data: 'HeliKills'},
+                           {data: 'APCKills'},
+                           {data: 'BulletsFired'},
+                         ],
+                "order": [[ 1, "desc" ]] // Pick the column(s) you want to be sorted by default
+            });
+        } );
+	</script>
+</head>
+    
+<body>
+    <table id="example" class="display">
+       <thead>
+            <tr>
+                <th>Name</th>
+                <th>PVPKills</th>
+                <th>PVPDistance</th>
+                <th>PVEKills</th>
+                <th>PVEDistance</th>
+                <th>SleepersKilled</th>
+                <th>HeadShots</th>
+                <th>Deaths</th>
+                <th>Suicides</th>
+                <th>KDR</th>
+                <th>SDR</th>
+                <th>TimesHealed</th>
+                <th>HeliKills</th>
+                <th>APCKills</th>
+                <th>BulletsFired</th>
+            </tr>
+        </thead>
+    </table>
+    
+</body>
+</html>
